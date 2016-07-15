@@ -1,4 +1,4 @@
-h1. find_sdl_banned_funcs
+# find_sdl_banned_funcs
 
 Find SDL Banned Functions is an IDAPython script written to find functions from the MS Security Development Lifecycle (SDL) Banned Function Calls list published at: https://msdn.microsoft.com/en-us/library/bb288454.aspx
 
