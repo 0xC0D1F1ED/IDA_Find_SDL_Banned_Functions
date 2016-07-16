@@ -46,7 +46,6 @@ Message("\nBeginning search for banned functions.\n")
 foundList = []
 for f in funcs:
 	for b in banned:
-		#if (Name(f).upper().endswith(b.upper())):		# using Upper here was force of habbit but might be stupid. possible for duplicates ie: strcat and StrCat
 		if (Name(f).endswith(b)):
 			if Name(f) not in foundList:			# really terrible and ineffecient way to perform de-duplication
 				foundList.append(Name(f))
@@ -56,6 +55,5 @@ for f in funcs:
 					for xref in XrefsTo(item, 0):
 						if xref.type == fl_CN or xref.type == fl_CF:
 							Message("* %s is called from %s at %s\n" % (Name(f), GetFunctionName(xref.frm), hex(xref.frm)))
-							#Message("type: %s, typename: %s, from: %s, at: %s\n" % (xref.type, XrefTypeName(xref.type), Name(xref.frm), hex(xref.frm)))
 
 Message("Search complete.\n")
